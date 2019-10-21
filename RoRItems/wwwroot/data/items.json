@@ -1,0 +1,14 @@
+[
+  {
+    "Description": "Increase damage to enemies within 13m by 15% (+15% per stack).",
+    "Image": "img/focuscrystal.png",
+    "Name": "Focus Crystal",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Your attacks have a 10% (+10% per stack) chance to 'Critically Strike', dealing double damage.",
+    "Image": "img/lensmakersglasses.png",
+    "Name": "Lens-Maker's Glasses",
+    "Rarity": "Common"
+  }
+]
