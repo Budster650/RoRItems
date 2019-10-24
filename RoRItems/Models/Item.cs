@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace RoRItems.Models
 {
     public class Item
-    {
+    { 
         public string Description { get; set; }
+        public string Id { get; set; }
         public string Image { get; set; }
         public string Name { get; set; }
         public string Rarity { get; set; }
