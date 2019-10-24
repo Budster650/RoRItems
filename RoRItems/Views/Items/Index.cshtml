@@ -1,0 +1,12 @@
+﻿@using RoRItems.Models
+@using RoRItems.Services
+@inject JsonFileItemService ItemService
+<h1>test</h1>
+
+@{
+    foreach(var item in ItemService.GetItems())
+    {
+        <img src="@item.Image" /> 
+        <p>@item.Name</p>
+    }
+}
