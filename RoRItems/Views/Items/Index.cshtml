@@ -11,13 +11,21 @@
     {
         foreach (var item in itemCollection)
         {
-        <img src="@item.Image" /> 
-        <p>@item.Name</p>
+            <a href="/@item.Id"><img src="@item.Image" /></a>
+
+            <p>@item.Name</p>
         }
     }
     else
     {
-        var item = itemCollection.First(x => x.Id == Model.Id);
-        <p>@item.Description</p>
+        try
+        {
+            var item = itemCollection.First(x => x.Id == Model.Id);
+            <p>@item.Description</p>
+        }
+        catch (InvalidOperationException e)
+        {
+            <p>Item Not Found</p>
+        }
     }
 }
