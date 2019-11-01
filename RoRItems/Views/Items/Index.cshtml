@@ -9,12 +9,12 @@
 
     if (Model.Id == null)
     {
-        foreach (var item in itemCollection)
+        <div class="container">
+        @foreach (var item in itemCollection)
         {
-            <a href="/@item.Id"><img src="@item.Image" /></a>
-
-            <p>@item.Name</p>
+            <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
         }
+        </div>
     }
     else
     {

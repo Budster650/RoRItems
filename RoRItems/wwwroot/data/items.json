@@ -8,9 +8,23 @@
   },
   {
     "Description": "Your attacks have a 10% (+10% per stack) chance to 'Critically Strike', dealing double damage.",
-    "Id":  "lensmakersglasses",
+    "Id": "lensmakersglasses",
     "Image": "/data/img/lensmakersglasses.png",
     "Name": "Lens-Maker's Glasses",
     "Rarity": "Common"
+  },
+  {
+    "Description": "Hold an additional equipment charge (+1 per stack). Reduce equipment cooldown by 15% (+15% per stack).",
+    "Id": "fuelcell",
+    "Image": "/data/img/fuelcell.png",
+    "Name": "Fuel Cell",
+    "Rarity": "Uncommon"
+  },
+  {
+    "Description": "Killing an enemy surrounds you with an ice storm that deals 600% damage per second. The storm grows with every kill, increasing its radius by 1m. Stacks up to 6m (+6m per stack).",
+    "Id": "frostrelic",
+    "Image": "/data/img/frostrelic.png",
+    "Name": "Frost Relic",
+    "Rarity": "Rare"
   }
 ]
