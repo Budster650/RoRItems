@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RoRItems.Models;
 
 namespace RoRItems.Controllers
 {
@@ -10,7 +11,16 @@ namespace RoRItems.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var viewModel = new Item();
+            return View(viewModel);
+        }
+        
+        [Route("{id}")]
+        public IActionResult Index(string id)
+        {
+            var viewModel = new Item();
+            viewModel.Id = id;
+            return View(viewModel);
         }
     }
 }

@@ -1,12 +1,23 @@
 ﻿@using RoRItems.Models
 @using RoRItems.Services
 @inject JsonFileItemService ItemService
-<h1>test</h1>
+@model Item
 
+<p>current model id : @Model.Id</p>
 @{
-    foreach(var item in ItemService.GetItems())
+    var itemCollection = ItemService.GetItems();
+
+    if (Model.Id == null)
     {
+        foreach (var item in itemCollection)
+        {
         <img src="@item.Image" /> 
         <p>@item.Name</p>
+        }
+    }
+    else
+    {
+        var item = itemCollection.First(x => x.Id == Model.Id);
+        <p>@item.Description</p>
     }
 }
