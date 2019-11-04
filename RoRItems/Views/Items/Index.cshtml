@@ -26,6 +26,11 @@
         where i.Rarity == "Rare"
         select i;
 
+    var bossItems =
+        from i in itemCollection
+        where i.Rarity == "Boss"
+        select i;
+
     var lunarItems =
         from i in itemCollection
         where i.Rarity == "Lunar"
@@ -63,6 +68,12 @@
         </div>
         <div class="container" id="rare">
             @foreach (var item in rareItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
+        </div>
+        <div class="container" id="boss">
+            @foreach (var item in bossItems)
             {
                 <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
             }

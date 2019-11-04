@@ -26,5 +26,145 @@
     "Image": "/data/img/frostrelic.png",
     "Name": "Frost Relic",
     "Rarity": "Rare"
+  },
+  {
+    "Description": "Heal for 10 (+10 per stack) health 1.1 seconds after getting hurt.",
+    "Id": "medkit",
+    "Image": "/data/img/medkit.png",
+    "Name": "Medkit",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Killing an enemy spawns a healing orb that heals for 6 (+6 per stack) health.",
+    "Id": "monstertooth",
+    "Image": "/data/img/monstertooth.png",
+    "Name": "Monster Tooth",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Increases movement speed by 14% (+14% per stack).",
+    "Id": "paulsgoathoof",
+    "Image": "/data/img/paulsgoathoof.png",
+    "Name": "Paul's Goat Hoof",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Gain a 25 (+25 per stack) health shield. Recharges outside of danger.",
+    "Id": "personalshieldgenerator",
+    "Image": "/data/img/personalshieldgenerator.png",
+    "Name": "Personal Shield Generator",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "A hidden cache containing an item will appear in a random location on each stage. (Increases rarity of the item per stack).",
+    "Id": "rustedkey",
+    "Image": "/data/img/rustedkey.png",
+    "Name": "Rusted Key",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Increases attack speed by 15% (+15% per stack).",
+    "Id": "soldierssyringe",
+    "Image": "/data/img/soldierssyringe.png",
+    "Name": "Soldier's Syringe",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "5% (+5% per stack) chance on hit to attach a bomb to an enemy, detonating for 180% TOTAL damage.",
+    "Id": "stickybomb",
+    "Image": "/data/img/stickybomb.png",
+    "Name": "Sticky Bomb",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "5% (+5% on stack) chance on hit to stun enemies for 2 seconds.",
+    "Id": "stungrenade",
+    "Image": "/data/img/stungrenade.png",
+    "Name": "Stun Grenade",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Gain a temporary barrier on kill for 15 health (+15 per stack).",
+    "Id": "topazbrooch",
+    "Image": "/data/img/topazbrooch.png",
+    "Name": "Topaz Brooch",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "15% (+15% per stack) chance to block incoming damage. Unaffected by luck.",
+    "Id": "toughertimes",
+    "Image": "/data/img/toughertimes.png",
+    "Name": "Tougher Times",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "15% (+15% per stack) chance to bleed an enemy for 240% base damage.",
+    "Id": "tritipdagger",
+    "Image": "/data/img/tritipdagger.png",
+    "Name": "Tri-Tip Dagger",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "On level up drop a banner that strengthens all allies within 16m (+8m per stack). Raise attack and movement speed by 30%.",
+    "Id": "warbanner",
+    "Image": "/data/img/warbanner.png",
+    "Name": "Warbanner",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Activating an interactable launches 8 (+4 per stack) fireworks that deal 300% base damage.",
+    "Id": "bundleoffireworks",
+    "Image": "/data/img/bundleoffireworks.png",
+    "Name": "Bundle of Fireworks",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Deal an additional 20% damage (+20% per stack) to bosses.",
+    "Id": "armorpiercingrounds",
+    "Image": "/data/img/armorpiercingrounds.png",
+    "Name": "Armor-Piercing Rounds",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Add +1 (+1 per stack) charge of your Secondary skill.",
+    "Id": "backupmagazine",
+    "Image": "/data/img/backupmagazine.png",
+    "Name": "Backup Magazine",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "After standing still for 2 seconds, create a zone that heals for 4.5% (+2.25% per stack) of your health every second to all allies within 3m (+1.5m per stack).",
+    "Id": "bustlingfungus",
+    "Image": "/data/img/bustlingfungus.png",
+    "Name": "Bustling Fungus",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Increases passive health regeneration by 300% (+300% per stack) while outside of combat.",
+    "Id": "cautiousslug",
+    "Image": "/data/img/cautiousslug.png",
+    "Name": "Cautious Slug",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Deal 150% (+50% per stack) damage to enemies above 90% health.",
+    "Id": "crowbar",
+    "Image": "/data/img/crowbar.png",
+    "Name": "Crowbar",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Sprint speed is improved by 30% (+20% per stack).",
+    "Id": "energydrink",
+    "Image": "/data/img/energydrink.png",
+    "Name": "Energy Drink",
+    "Rarity": "Common"
+  },
+  {
+    "Description": "Killing an enemy ignites all enemies within 12m (+4m per stack). Enemies burn for 150% (+75% per stack) base damage.",
+    "Id": "gasoline",
+    "Image": "/data/img/gasoline.png",
+    "Name": "Gasoline",
+    "Rarity": "Common"
   }
 ]
