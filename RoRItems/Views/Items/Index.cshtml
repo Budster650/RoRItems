@@ -7,20 +7,101 @@
 @{
     var itemCollection = ItemService.GetItems();
 
+    // Despite this looking clumsy, I think this is faster than providing individual rarities from the service.
+    // (That would require multiple hits to disk; our itemCollection is already in memory.)
+    // Also, the named rarities will be used in the UI directly, making the manual approach sensible.
+
+    var commonItems =
+        from i in itemCollection
+        where i.Rarity == "Common"
+        select i;
+
+    var uncommonItems =
+        from i in itemCollection
+        where i.Rarity == "Uncommon"
+        select i;
+
+    var rareItems =
+        from i in itemCollection
+        where i.Rarity == "Rare"
+        select i;
+
+    var lunarItems =
+        from i in itemCollection
+        where i.Rarity == "Lunar"
+        select i;
+
+    var lunarEquipmentItems =
+        from i in itemCollection
+        where i.Rarity == "Lunar Equipment"
+        select i;
+
+    var equipmentItems =
+        from i in itemCollection
+        where i.Rarity == "Equipment"
+        select i;
+
+    var eliteEquipmentItems =
+        from i in itemCollection
+        where i.Rarity == "Elite Equipment"
+        select i;
+
     if (Model.Id == null)
     {
-        <div class="container">
-        @foreach (var item in itemCollection)
-        {
-            <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
-        }
+    <div class="container" id="items">
+        <div class="container" id="common">
+            @foreach (var item in commonItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
         </div>
+        <div class="container" id="uncommon">
+            @foreach (var item in uncommonItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
+        </div>
+        <div class="container" id="rare">
+            @foreach (var item in rareItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
+        </div>
+        <div class="container" id="lunar">
+            @foreach (var item in lunarItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
+        </div>
+        <div class="container" id="lunarEquipment">
+            @foreach (var item in lunarEquipmentItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
+        </div>
+        <div class="container" id="equipment">
+            @foreach (var item in equipmentItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
+        </div>
+        <div class="container" id="eliteEquipment">
+            @foreach (var item in eliteEquipmentItems)
+            {
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+            }
+        </div>
+    </div>
     }
     else
     {
+        <a href="/"><p>Back to Items</p></a>
         try
         {
             var item = itemCollection.First(x => x.Id == Model.Id);
+            <img src="@item.Image" alt="@item.Name" class="img-fluid" />
+            <h4>@item.Name</h4>
+            <p>@item.Rarity</p>
             <p>@item.Description</p>
         }
         catch (InvalidOperationException e)
