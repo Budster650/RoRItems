@@ -12,6 +12,7 @@ namespace RoRItems.Models
         public string Id { get; set; }
         public string Image { get; set; }
         public string Name { get; set; }
+        public string Pickup { get; set; }
         public string Rarity { get; set; }
 
         public override string ToString()
