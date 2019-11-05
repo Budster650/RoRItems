@@ -9,7 +9,11 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #cbe6e4;
+}
+
+h5, h4, h3, h2, h1, p {
+  color: #ffffff;
 }
 
 .btn-primary {
@@ -59,8 +63,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color:#111111;
 }
 .footer {
   position: absolute;

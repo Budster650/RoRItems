@@ -17,8 +17,8 @@
   },
   {
     "Description": "Your attacks have a 10% (+10% per stack) chance to 'Critically Strike', dealing double damage.",
-    "Id": "lensmakers-glasses",
-    "Image": "/data/img/lensmakers-glasses.png",
+    "Id": "lens-makers-glasses",
+    "Image": "/data/img/lens-makers-glasses.png",
     "Name": "Lens-Maker's Glasses",
     "Rarity": "Common",
     "Pickup": "Chance to 'Critically Strike', dealing double damage."
@@ -424,14 +424,6 @@
     "Pickup": "Chance on killing an enemy to summon a ghost."
   },
   {
-    "Description": "Killing enemies has a 10% chance to spawn a ghost of the killed enemy with 500% damage. Lasts 30s (+30s per stack).",
-    "Id": "happiest-mask",
-    "Image": "/data/img/happiest-mask.png",
-    "Name": "Happiest Mask",
-    "Rarity": "Rare",
-    "Pickup": "Chance on killing an enemy to summon a ghost."
-  },
-  {
     "Description": "Add +2 (+2 per stack) charges of your Utility skill. Reduces Utility skill cooldown by 33%.",
     "Id": "hardlight-afterburner",
     "Image": "/data/img/hardlight-afterburner.png",
@@ -718,6 +710,14 @@
     "Name": "Foreign Fruit",
     "Rarity": "Equipment",
     "Pickup": "Heal on use."
+  },
+  {
+    "Description": "Looks like it could power something. EXTREMELY unstable...",
+    "Id": "fuel-array",
+    "Image": "/data/img/fuel-array.png",
+    "Name": "Fuel Array",
+    "Rarity": "Equipment",
+    "Pickup": "Looks like it could power something. EXTREMELY unstable..."
   },
   {
     "Description": "Become an aspect of fire.",

@@ -3,7 +3,6 @@
 @inject JsonFileItemService ItemService
 @model Item
 
-<p>current model id : @Model.Id</p>
 @{
     var itemCollection = ItemService.GetItems();
 
@@ -53,53 +52,56 @@
 
     if (Model.Id == null)
     {
+    <div id="title">
+        <img src="/data/img/ror2-icon.png" width="128"/>
+    </div>
     <div class="container" id="items">
-        <div class="container" id="common">
+        <div class="container py-3" id="common">
             @foreach (var item in commonItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
-        <div class="container" id="uncommon">
+        <div class="container py-3" id="uncommon">
             @foreach (var item in uncommonItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
-        <div class="container" id="rare">
+        <div class="container py-3" id="rare">
             @foreach (var item in rareItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
-        <div class="container" id="boss">
+        <div class="container py-3" id="boss">
             @foreach (var item in bossItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
-        <div class="container" id="lunar">
+        <div class="container py-3" id="lunar">
             @foreach (var item in lunarItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
-        <div class="container" id="lunarEquipment">
+        <div class="container py-3" id="lunarEquipment">
             @foreach (var item in lunarEquipmentItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
-        <div class="container" id="equipment">
+        <div class="container py-3" id="equipment">
             @foreach (var item in equipmentItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
-        <div class="container" id="eliteEquipment">
+        <div class="container py-3" id="eliteEquipment">
             @foreach (var item in eliteEquipmentItems)
             {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" /></a>
+                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
             }
         </div>
     </div>
@@ -110,7 +112,7 @@
         try
         {
             var item = itemCollection.First(x => x.Id == Model.Id);
-            <img src="@item.Image" alt="@item.Name" class="img-fluid" />
+            <img src="@item.Image" alt="@item.Name" class="img-fluid" width="128"/>
             <h4>@item.Name</h4>
             <p>@item.Rarity</p>
             <p>@item.Description</p>
