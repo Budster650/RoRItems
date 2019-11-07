@@ -17,6 +17,7 @@ h5, h4, h3, h2, h1, p {
 
 .popover {
     background-color: #425262;
+    pointer-events: none; /*prevents tooltip flickering for low resolution windows*/
 }
 
 .popover-header{
