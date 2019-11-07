@@ -7,13 +7,24 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
 a {
   color: #cbe6e4;
 }
 
 h5, h4, h3, h2, h1, p {
   color: #ffffff;
+}
+
+.popover {
+    background-color: #425262;
+}
+
+.popover-header{
+    background-color: #07111f;
+}
+
+.popover-body{
+    color: #fff;
 }
 
 .btn-primary {
