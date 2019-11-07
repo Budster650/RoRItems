@@ -9,7 +9,7 @@
     // Despite this looking clumsy, I think this is faster than providing individual rarities from the service.
     // (That would require multiple hits to disk; our itemCollection is already in memory.)
     // Also, the named rarities will be used in the UI directly, making the manual approach sensible.
-
+    
     var commonItems =
         from i in itemCollection
         where i.Rarity == "Common"
@@ -52,61 +52,61 @@
 
     if (Model.Id == null)
     {
-    <!--
-    <div id="title">
-        <img src="/data/img/ror2-icon.png" width="128"/>
-    </div>
-    -->
-    <div class="container pt-3" id="items">
-        <div class="container py-3" id="common">
-            @foreach (var item in commonItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
+        <!--
+        <div id="title">
+            <img src="/data/img/ror2-icon.png" width="128"/>
         </div>
-        <div class="container py-3" id="uncommon">
-            @foreach (var item in uncommonItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
+        -->
+        <div class="container pt-3" id="items">
+            <div class="container py-3" id="common">
+                @foreach (var item in commonItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
+            <div class="container py-3" id="uncommon">
+                @foreach (var item in uncommonItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
+            <div class="container py-3" id="rare">
+                @foreach (var item in rareItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
+            <div class="container py-3" id="boss">
+                @foreach (var item in bossItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
+            <div class="container py-3" id="lunar">
+                @foreach (var item in lunarItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
+            <div class="container py-3" id="lunarEquipment">
+                @foreach (var item in lunarEquipmentItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
+            <div class="container py-3" id="equipment">
+                @foreach (var item in equipmentItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
+            <div class="container py-3" id="eliteEquipment">
+                @foreach (var item in eliteEquipmentItems)
+                {
+                    <a href="/@item.Id" data-trigger="hover" data-toggle="popover" title="@item.Name" data-content="@item.Description"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64" /></a>
+                }
+            </div>
         </div>
-        <div class="container py-3" id="rare">
-            @foreach (var item in rareItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
-        </div>
-        <div class="container py-3" id="boss">
-            @foreach (var item in bossItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
-        </div>
-        <div class="container py-3" id="lunar">
-            @foreach (var item in lunarItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
-        </div>
-        <div class="container py-3" id="lunarEquipment">
-            @foreach (var item in lunarEquipmentItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
-        </div>
-        <div class="container py-3" id="equipment">
-            @foreach (var item in equipmentItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
-        </div>
-        <div class="container py-3" id="eliteEquipment">
-            @foreach (var item in eliteEquipmentItems)
-            {
-                <a href="/@item.Id"><img src="@item.Image" alt="@item.Name" class="img-fluid" width="64"/></a>
-            }
-        </div>
-    </div>
     }
     else
     {
@@ -114,7 +114,7 @@
         try
         {
             var item = itemCollection.First(x => x.Id == Model.Id);
-            <img src="@item.Image" alt="@item.Name" class="img-fluid" width="128"/>
+            <img src="@item.Image" alt="@item.Name" class="img-fluid" width="128" />
             <h4>@item.Name</h4>
             <p>@item.Rarity</p>
             <p>@item.Description</p>
@@ -125,3 +125,5 @@
         }
     }
 }
+
+
